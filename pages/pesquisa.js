@@ -45,7 +45,7 @@ const Pesquisa = () => {
         Biah Massoterapia sempre busca por atender melhor seus clientes.<br/>
         Por isso, estamos sempre abertos a ouvir sua opinião.
       </p>
-      {!success && <div className='mx-auto sm:justify-right  sm:w-12'>
+      {!success && <div className='w-1/2 mx-auto sm:justify-right sm:w-12'>
         <form class='sm:w-8 sm:align-right' onSubmit={formik.handleSubmit}>
           <label className='font-bold'>Seu nome:</label>
           <input 
@@ -135,16 +135,16 @@ const Pesquisa = () => {
         </form>
       </div>}
       {success && <div className='w-1/5 mx-auto'>
-        <p className='md:items-center mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
+        <p className='md:items-center mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 '>Obrigado por contribuir com sua sugestão ou crítica.</p>
         {
-          retorno.showCoupon && <div className='text-center border p-4 mb-4'>
+          retorno.showCoupon && <div className='text-center border sm:border p-4 mb-4 sm:w-8'>
             Seu cupom: <br/>
-            <span className='font-bold text-2xl'>{retorno.Cupom}</span>
+            <span className='font-bold text-2xl sm:border sm:w-8'>{retorno.Cupom}</span>
           </div>
         }
         {
-          retorno.showCoupon && <div className='text-center border p-4 mb-4'>
-            <span className='font-bold block mb-2'>{retorno.Promo}</span>
+          retorno.showCoupon && <div className='text-center border p-4 mb-4 sm:w-8'>
+            <span className='font-bold inline-block mb-2'>{retorno.Promo}</span>
             <br/>
             <span className='md:items-center italic'>Tire um print desta tela e apresente ao proprietario.</span>
           </div>
